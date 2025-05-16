@@ -224,7 +224,6 @@ public class ResumeBuilder {
                     document.add(titlePara);
                     document.add(Chunk.NEWLINE);
 
-                    // Fixed Objective Section
                     document.add(new Paragraph("OBJECTIVE", sectionFont));
                     document.add(new Paragraph(objectiveText.getText(), textFont));
                     document.add(Chunk.NEWLINE);
@@ -244,7 +243,11 @@ public class ResumeBuilder {
                     document.add(new Paragraph("WORK EXPERIENCE: " + experienceCombo.getSelectedItem(), sectionFont));
                     document.add(Chunk.NEWLINE);
 
-                    document.add(new Paragraph("SKILLS: " + skillField1.getText(), sectionFont));
+                    document.add(new Paragraph("SKILLS:", sectionFont));
+                    document.add(new Paragraph("- " + skillField1.getText(), textFont));
+                    document.add(new Paragraph("- " + skillField2.getText(), textFont));
+                    document.add(new Paragraph("- " + skillField3.getText(), textFont));
+                    document.add(new Paragraph("- " + skillField4.getText(), textFont));
                     document.add(Chunk.NEWLINE);
 
                     document.add(new Paragraph("EDUCATION", sectionFont));
